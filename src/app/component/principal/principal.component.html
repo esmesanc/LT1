@@ -3,7 +3,8 @@
 <div >
    <h1 class="text-light">Topics</h1>
 </div><br> -->
+
 <div class="p" *ngFor="let t of temas" >
-    <button [routerLink]="['/dificultad', t.id]">{{ t.nombre }}</button>
+    <button class="btn btn-danger form-control m-2  btn-block" data-toggle="collapse" type="button"[routerLink]="['/dificultad', t.id]">{{ t.nombre }}</button>
 </div>
 <br>

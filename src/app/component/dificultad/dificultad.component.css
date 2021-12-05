@@ -1,0 +1,17 @@
+.p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  width: 10%;
+  height: 150%;
+
+}
+.container{
+  display: flex;
+  background-color: brown;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
