@@ -1,0 +1,9 @@
+.body {
+  display: flex;
+  justify-content: center;
+  row-gap: 3em;
+  height: 200%;
+  align-items: center;
+  background-color:#001C40;
+
+}

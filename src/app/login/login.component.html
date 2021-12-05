@@ -1,1 +1,25 @@
-<p>login works!</p>
+  <app-navbar></app-navbar>
+  <!-- <div class="body"> -->
+
+<div class="container login">
+  <div class="card text-center ancho">
+  <div class="card-header">
+   <b>LOGIN</b>
+  </div>
+  <div class="card-body p-4">
+    <label style="float:left;"> Correo electronico</label>
+    <input type="email" class="form-control m-2" placeholder="Ingresa correo electronico" [(ngModel)]= "usuario.email">
+
+    <label style="float:left;"> Contraseña</label>
+    <input type="password"class="form-control m-2" placeholder="Ingresa contraseña" [(ngModel)]= "usuario.password">
+
+    <button class="btn btn-primary  btn-block" (click)="Ingresar()" >Ingresar</button>
+    <button class="btn btn-info  btn-block" (click)="IngresaConGoogle()" >Ingresar con google</button>
+
+     <label> Aun no tienes cuenta? <a href="/register"> Registrate aquí</a></label>
+
+  </div>
+</div>
+</div>
+<!-- </div> -->
+

@@ -1,0 +1,9 @@
+<app-navbar></app-navbar>
+<!--
+<div >
+   <h1 class="text-light">Topics</h1>
+</div><br> -->
+<div class="p" *ngFor="let t of temas" >
+    <button [routerLink]="['/dificultad', t.id]">{{ t.nombre }}</button>
+</div>
+<br>
