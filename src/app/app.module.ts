@@ -16,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { PrincipalComponent } from './component/principal/principal.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireMessagingModule } from '@angular/fire/compat/messaging';
 import { PreguntasComponent } from './component/preguntas/preguntas.component';
 import { DificultadComponent } from './component/dificultad/dificultad.component';
 
@@ -36,6 +37,7 @@ import { DificultadComponent } from './component/dificultad/dificultad.component
     AppRoutingModule,
     NgbModule,
     FormsModule,
+    AngularFireMessagingModule,
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     ServiceWorkerModule.register('ngsw-worker.js', {

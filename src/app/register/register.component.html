@@ -1,23 +1,46 @@
 <app-navbar></app-navbar>
 <div class="container login">
   <div class="card text-center ancho">
-  <div class="card-header ">
-   <b>REGISTRO</b>
+    <div class="card-header">
+      <b>REGISTRO</b>
+    </div>
+    <div class="p-4">
+      <label style="float: left"> Nombre</label>
+      <input
+        type="email"
+        class="form-control m-2"
+        placeholder="Ingresa tu nombre"
+        [(ngModel)]="usuario.nombre"
+      />
+
+      <label style="float: left"> Correo electronico</label>
+      <input
+        type="email"
+        class="form-control m-2"
+        placeholder="Ingresa correo electronico"
+        [(ngModel)]="usuario.email"
+      />
+
+      <label style="float: left"> Contraseña</label>
+      <input
+        type="password"
+        class="form-control m-2"
+        placeholder="Ingresa contraseña"
+        [(ngModel)]="usuario.password"
+      />
+
+      <button
+        class="btn btn-primary btn-block"
+        (click)="Ingresar()"
+        href="/login"
+      >
+        Registro
+      </button>
+      <button class="btn btn-info btn-block" (click)="IngresaConGoogle()">
+        Registrar con google
+      </button>
+
+      <label> Ya tienes cuenta? <a href="/login"> Ingresa aquí</a></label>
+    </div>
   </div>
-  <div class=" p-4">
-
-    <label style="float:left;"> Nombre</label>
-    <input type="email" class="form-control m-2" placeholder="Ingresa tu nombre" [(ngModel)]= "usuario.nombre">
-
-    <label style="float:left;"> Correo electronico</label>
-    <input type="email" class="form-control m-2" placeholder="Ingresa correo electronico" [(ngModel)]= "usuario.email">
-
-    <label style="float:left;"> Contraseña</label>
-    <input type="password"class="form-control m-2" placeholder="Ingresa contraseña" [(ngModel)]= "usuario.password">
-
-    <button class="btn btn-primary  btn-block" (click)="Ingresar()" href="/login" >Registro</button>
-    <button class="btn btn-info  btn-block" (click)="IngresaConGoogle()" >Registrar con google</button>
-
-  </div>
-</div>
 </div>

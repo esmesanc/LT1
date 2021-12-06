@@ -1,7 +1,28 @@
 <app-navbar></app-navbar>
-<div >
-<p>dificultad works!</p>
-<button  class="btn btn-outline-danger form-control m-2  btn-block" data-toggle="collapse" type="button" (click)="enviar('facil')">aqui</button>
-<button  class="btn btn-outline-danger form-control m-2  btn-block" data-toggle="collapse" type="button" (click)="enviar('medio')">aqui</button>
-<button  class="btn btn-outline-danger form-control m-2  btn-block" data-toggle="collapse" type="button" (click)="enviar('dificil')">aqui</button>
+<div>
+  <h1 class="p">Elije tu dificultad</h1>
+  <button
+    class="btn btn-success form-control m-2"
+    data-toggle="collapse"
+    type="button"
+    (click)="enviar('facil')"
+  >
+    Fácil
+  </button>
+  <button
+    class="btn btn-warning form-control m-2"
+    data-toggle="collapse"
+    type="button"
+    (click)="enviar('medio')"
+  >
+    Medio
+  </button>
+  <button
+    class="btn btn-danger form-control m-2"
+    data-toggle="collapse"
+    type="button"
+    (click)="enviar('dificil')"
+  >
+    Difícil
+  </button>
 </div>

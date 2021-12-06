@@ -1,10 +1,66 @@
-
 <app-navbar></app-navbar>
-<div *ngFor="let t of preguntas" >
-  <h1>{{t.pregunta}}</h1>
-  <button  class="btn btn-outline-danger form-control m-2  btn-block" data-toggle="collapse" type="button" (click)="revisar(t.respuesta1,t.correcta)">{{t.respuesta1}}</button>
-  <button  class="btn btn-outline-danger form-control m-2  btn-block" data-toggle="collapse" type="button" (click)="revisar(t.respuesta2,t.correcta)">{{t.respuesta2}}</button>
-  <button class="btn btn-outline-danger form-control m-2  btn-block" data-toggle="collapse" type="button"(click)="revisar(t.respuesta3,t.correcta)">{{t.respuesta3}}</button>
-  <button  class="btn btn-outline-danger form-control m-2  btn-block" data-toggle="collapse" type="button" (click)="revisar(t.respuesta4,t.correcta)" >{{t.respuesta4}}</button>
+
+<div *ngIf="preguntaId && !contestado">
+  <h1>{{ pregunta.pregunta }}</h1>
+  <button
+    class="btn btn-primary form-control m-2"
+    data-toggle="collapse"
+    type="button"
+    (click)="revisar(pregunta.respuesta1, pregunta.correcta)"
+  >
+    {{ pregunta.respuesta1 }}
+  </button>
+  <button
+    class="btn btn-primary form-control m-2"
+    data-toggle="collapse"
+    type="button"
+    (click)="revisar(pregunta.respuesta2, pregunta.correcta)"
+  >
+    {{ pregunta.respuesta2 }}
+  </button>
+  <button
+    class="btn btn-primary form-control m-2"
+    data-toggle="collapse"
+    type="button"
+    (click)="revisar(pregunta.respuesta3, pregunta.correcta)"
+  >
+    {{ pregunta.respuesta3 }}
+  </button>
+  <button
+    class="btn btn-primary form-control m-2"
+    data-toggle="collapse"
+    type="button"
+    (click)="revisar(pregunta.respuesta4, pregunta.correcta)"
+  >
+    {{ pregunta.respuesta4 }}
+  </button>
+</div>
+<div class="container-fluid" style="text-align: center" *ngIf="!preguntaId">
+  <h1>Espere mientras carga su pregunta</h1>
+  <img class="p" src="../../../assets/loading/loading-11.gif" />
+</div>
+
+<div class="container-fluid" *ngIf="preguntaId && contestado">
+  <img
+      *ngIf="!incorrect"
+      style="width: 300px; height: 300px; align-items: center;"
+      src="../../../assets/answers/correct.png"
+    />
+    <img
+      *ngIf="incorrect"
+      style="width: 300px; height: 300px; align-items: center;"
+      src="../../../assets/answers/incorrect.png"
+    />
+  <div class="card text-center">
+    <div class="card-body">
+      <h5 class="card-title">{{title}}</h5>
+      <p class="card-text">
+        {{subtitle}}
+      </p>
+      <a (click)="recargar()" class="btn btn-success">Otra pregunta</a>
+      <a href="/dificultad/{{topicid}}" class="btn btn-warning">Escoger otro nivel</a>
+      <a href="/principal" class="btn btn-danger">Escoger otro tema</a>
+    </div>
+  </div>
 </div>
 

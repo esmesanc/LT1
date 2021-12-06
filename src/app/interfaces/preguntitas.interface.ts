@@ -7,5 +7,5 @@ export interface preguntitas {
   respuesta3: string;
   respuesta4: string;
   dificultad: string;
-  topic: number;
+  topic: string;
 }

@@ -1,11 +1,5 @@
 .p{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5px;
-  width: 10%;
-  height: 150%;
-
+  text-align: center;
 }
 .container{
   display: flex;

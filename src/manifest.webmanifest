@@ -1,7 +1,7 @@
 {
-  "name": "Learning-Together",
-  "short_name": "Learning-Together",
-  "theme_color": "#1976d2",
+  "name": "Learning Together",
+  "short_name": "learning_together",
+  "theme_color": "#197dff",
   "background_color": "#fafafa",
   "display": "standalone",
   "scope": "./",

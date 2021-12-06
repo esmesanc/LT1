@@ -1,9 +1,9 @@
 .body {
   display: flex;
-  justify-content: center;
   row-gap: 3em;
-  height: 200%;
-  align-items: center;
+  max-width: 100%;
+  height: auto;
+  width: auto\9;
   background-color:#001C40;
 
 }
